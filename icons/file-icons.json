@@ -1,0 +1,17 @@
+{
+  "iconDefinitions": {
+    "lambda_icon": {
+      "iconPath": "./icons/lambda.svg"
+    }
+  },
+  "file": "lambda_icon",
+  "fileExtensions": {
+    "js": "lambda_icon",
+    "ts": "lambda_icon",
+    "json": "lambda_icon"
+  },
+  "fileNames": {
+    "package.json": "lambda_icon",
+    ".env": "lambda_icon"
+  }
+}

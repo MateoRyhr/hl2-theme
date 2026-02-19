@@ -1,0 +1,28 @@
+{
+  "name": "hl2-theme",
+  "displayName": "Half Life 2 Dark Theme",
+  "description": "A Half Life 2 inspired dark theme.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Half Life 2 Dark Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Half Life 2 Dark Theme-color-theme.json"
+      }
+    ]
+  },
+  "iconThemes": [
+    {
+      "id": "hl2-icons",
+      "label": "Half-Life 2 Icons",
+      "path": "./hl2-icon-theme.json"
+    }
+  ]
+}

@@ -115,7 +115,15 @@ function playHevSound(soundObj, extensionPath, soundKey) {
                 command = `afplay -v ${macVol} "${filePath}"`;
                 break;
             case 'win32':
-                command = `powershell -c "$wmp = New-Object -ComObject WMPlayer.OCX; $wmp.settings.volume = ${winVol}; $wmp.URL = '${filePath}'; while($wmp.playState -ne 1) { Start-Sleep -Milliseconds 100 }"`;
+                // We've abandoned WMPlayer.OCX and are using the native, strictly headless Windows API (WPF).
+                // We're giving it 150ms to open the file before evaluating the duration in the loop.
+                const psScript = `Add-Type -AssemblyName presentationCore; $player = New-Object System.Windows.Media.MediaPlayer; $player.Volume = ${volume}; $player.Open('${filePath}'); $player.Play(); Start-Sleep -Milliseconds 150; while ($player.Position -lt $player.NaturalDuration.TimeSpan) { Start-Sleep -Milliseconds 100 }`;
+                
+                // We encode to Base64 in Unicode format for PowerShell
+                const encodedScript = Buffer.from(psScript, 'utf16le').toString('base64');
+
+                // We operate entirely in the shadows
+                command = `powershell -WindowStyle Hidden -ExecutionPolicy Bypass -EncodedCommand ${encodedScript}`;
                 break;
         }
 

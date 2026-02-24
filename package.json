@@ -1,28 +1,171 @@
 {
-  "name": "hl2-theme",
-  "displayName": "Half Life 2 Dark Theme",
-  "description": "A Half Life 2 inspired dark theme.",
-  "version": "0.0.1",
+  "name": "half-life-dark-theme",
+  "displayName": "Half-Life Dark Theme",
+  "version": "1.0.0",
+  "publisher": "MateoRyhr",
+  "description": "A Half-Life inspired dark theme.",
+  "icon": "images/lambda-logo.png",
+  "galleryBanner": {
+    "color": "#1A1A1A",
+    "theme": "dark"
+  },
+  "keywords": [
+    "Half-Life",
+    "Half-Life 2",
+    "Black Mesa",
+    "Dark Theme",
+    "Theme",
+    "HEV",
+    "Gordon Freeman",
+    "Sounds"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateoRyhr/hl2-theme"
+  },
   "engines": {
     "vscode": "^1.109.0"
   },
   "categories": [
     "Themes"
   ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
+    "walkthroughs": [
+      {
+        "id": "hl2-walkthrough",
+        "title": "Welcome to Black Mesa",
+        "description": "Prepare your HEV Mark IV protective system for a productive coding session.",
+        "steps": [
+          {
+            "id": "activate-theme",
+            "title": "Equip the Suit",
+            "description": "Select the Half-Life Dark Theme to change your environment's colors. \n[Select Theme](command:workbench.action.selectTheme)",
+            "media": {
+              "image": "images/lambda-logo.png",
+              "altText": "Lambda Logo"
+            }
+          },
+          {
+            "id": "activate-icons",
+            "title": "Identify Assets",
+            "description": "Apply the Lambda icons to your file explorer. \n[Select File Icon Theme](command:workbench.action.selectIconTheme)",
+            "media": {
+              "image": "images/lambda-logo.png",
+              "altText": "Lambda Icons"
+            }
+          },
+          {
+            "id": "sound-check",
+            "title": "Audio Diagnostics",
+            "description": "Enable HEV voice feedback. Remember: Linux users need `mpg123` installed. \n[Enable All Sounds](command:hl2Theme.enableAllSounds)",
+            "media": {
+              "image": "images/lambda-logo.png",
+              "altText": "Sound Wave"
+            }
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "Half-Life Dark Theme",
+      "properties": {
+        "half-life-theme.enableSounds": {
+          "type": "boolean",
+          "default": true,
+          "description": "Master switch to enable/disable all HEV sounds."
+        },
+        "half-life-theme.enableStartupSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when VS Code starts."
+        },
+        "half-life-theme.enableTerminalOpenSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play combine radio when show the terminal"
+        },
+        "half-life-theme.enableTerminalErrorSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play 'Major fracture' when a command fails in the terminal."
+        },
+        "half-life-theme.enableFileSaveSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when saving a file."
+        },
+        "half-life-theme.enableFileOpenSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when open a file."
+        },
+        "half-life-theme.enableFileClosedSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when Closed a file."
+        },
+        "half-life-theme.enableFileCreatedSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when creating a file."
+        },
+        "half-life-theme.enableFileDeletedSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when delete a file."
+        },
+        "half-life-theme.enableTabSwitchSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when switching between files."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "hl2Theme.enableAllSounds",
+        "title": "Half-Life - HEV System: Enable All Sounds",
+        "category": "Half-Life"
+      },
+      {
+        "command": "hl2Theme.disableAllSounds",
+        "title": "Half-Life - HEV System: Disable All Sounds",
+        "category": "Half-Life"
+      },
+      {
+        "command": "hl2Theme.togglePanelWithSound",
+        "title": "HEV: Toggle Panel with Sound",
+        "category": "Half-Life"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "-workbench.action.togglePanel",
+        "key": "ctrl+j"
+      },
+      {
+        "command": "hl2Theme.togglePanelWithSound",
+        "key": "ctrl+j"
+      }
+    ],
     "themes": [
       {
-        "label": "Half Life 2 Dark Theme",
+        "label": "Half-Life Dark Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/Half Life 2 Dark Theme-color-theme.json"
+        "path": "./themes/Half-Life Dark Theme-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "half-life-icons",
+        "label": "Half-Life Icons",
+        "path": "./half-life-icon-theme.json"
       }
     ]
-  },
-  "iconThemes": [
-    {
-      "id": "hl2-icons",
-      "label": "Half-Life 2 Icons",
-      "path": "./hl2-icon-theme.json"
-    }
-  ]
+  }
 }

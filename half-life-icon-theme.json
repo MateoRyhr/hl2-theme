@@ -1,0 +1,51 @@
+{
+  "iconDefinitions": {
+    "lambda_icon": {
+      "iconPath": "./icons/orange-lambda.svg"
+    },
+    "js_icon": {
+      "iconPath": "./icons/hl2-js-icon.svg"
+    },
+    "ts_icon": {
+      "iconPath": "./icons/hl2-ts-icon.svg"
+    },
+    "json_icon": {
+      "iconPath": "./icons/hl2-json-icon.svg"
+    },
+    "c_icon": {
+      "iconPath": "./icons/hl2-c-icon.svg"
+    },
+    "cpp_icon": {
+      "iconPath": "./icons/hl2-cpp-icon.svg"
+    },
+    "cs_icon": {
+      "iconPath": "./icons/hl2-cs-icon.svg"
+    },
+    "css_icon": {
+      "iconPath": "./icons/hl2-css-icon.svg"
+    },
+    "html_icon": {
+      "iconPath": "./icons/hl2-html-icon.svg"
+    },
+    "git_icon": {
+      "iconPath": "./icons/hl2-git-icon.svg"
+    }
+
+  },
+  "file": "lambda_icon",
+  "fileExtensions": {
+    "js": "js_icon",
+    "ts": "ts_icon",
+    "json": "json_icon",
+    "h": "c_icon",
+    "cpp": "cpp_icon",
+    "cs": "cs_icon",
+    "css": "css_icon",
+    "html": "html_icon",
+    "git": "git_icon"
+  },
+  "fileNames": {
+    "package.json": "lambda_icon",
+    ".env": "lambda_icon"
+  }
+}

@@ -1,0 +1,101 @@
+/* hl2-markdown.css */
+/* HEV Mark IV - Markdown Preview Style System */
+
+body {
+    color: #c5c5c5; /* Terminal standard text */
+    background-color: #1a1a1a; /* Deep industrial gray */
+}
+
+/* Lambda Orange for all headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #FF8C00; 
+    border-bottom: 1px solid #333333;
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+}
+
+/* Links with HEV Suit Yellow/Orange */
+a {
+    color: #FFB000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FF8C00;
+}
+
+/* Combine style blockquotes */
+blockquote {
+    border-left: 4px solid #FF8C00;
+    padding: 10px 15px;
+    color: #999999;
+    background-color: #222222;
+    margin-left: 0;
+}
+
+/* Tables with industrial header */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    border: 1px solid #444444;
+    padding: 8px 12px;
+}
+
+table th {
+    background-color: #2a2a2a;
+    color: #FF8C00;
+}
+
+table tr:nth-child(even) {
+    background-color: #222222;
+}
+
+/* =========================================================
+   HEV Mark IV - highlight.js Syntax Override
+   ========================================================= */
+
+/* Keywords and Storage (HEV Suit Orange) */
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link {
+    color: #FF9A00 !important;
+    font-weight: bold;
+}
+
+/* Functions (Gravity Gun Blue) */
+.hljs-title.function_, .hljs-function .hljs-title, .hljs-name {
+    color: #4FC1FF !important;
+}
+
+/* Strings (Radioactive Green) */
+.hljs-string, .hljs-doctag, .hljs-regexp {
+    color: #8fe750 !important;
+}
+
+/* Classes, Types, and Built-ins (Combine Teal) */
+.hljs-type, .hljs-built_in, .hljs-template-tag, .hljs-template-variable, .hljs-title.class_ {
+    color: #56B6C2 !important;
+}
+
+/* Numbers and Constants */
+.hljs-number, .hljs-symbol, .hljs-bullet {
+    color: #E5C07B !important;
+}
+
+/* Attributes and JSON Keys */
+.hljs-attr, .hljs-attribute {
+    color: #D19A66 !important;
+}
+
+/* Comments (Combine Grey) */
+.hljs-comment, .hljs-quote {
+    color: #5C6370 !important;
+    font-style: italic;
+}
+
+/* Variables (Default Text) */
+.hljs-variable, .hljs-property {
+    color: #DCDCDC !important;
+}

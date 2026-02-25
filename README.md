@@ -2,9 +2,10 @@
 
 **A high-fidelity dark theme and sounds, inspired by City 17 and Black Mesa.**
 
-![](./images/theme.png)
+![Screenshot](./images/theme.png)
 
 ## ✨ Features
+
 - **Lambda Color Palette:** Carefully picked colors to feel like you're in the Half-Life universe.
 - **HEV Smart Sound System:** Real-time, priority-based audio feedback for startup, terminal errors, tab switching, and file operations.
 - **Icon Pack:** Custom Lambda icons for your workspace explorer.
@@ -40,7 +41,7 @@ If the sound system fails to initialize, the extension will still function as a 
 
 ## 🚀 Installation Guide
 
-You can install the **Half-Life 2 Full Experience** using one of the following methods:
+You can install the **Half-Life Full Experience** using one of the following methods:
 
 ### 1. Via Visual Studio Code Marketplace
 
@@ -57,7 +58,7 @@ If you have the compiled extension file:
 2. Run the following command:
 
 ```bash
-code --install-extension half-life-dark-theme-1.0.0.vsix
+code --install-extension half-life-dark-theme-1.0.1.vsix
 ```
 
 3. Restart Visual Studio Code.

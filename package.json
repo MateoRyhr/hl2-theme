@@ -1,7 +1,7 @@
 {
   "name": "half-life-dark-theme",
   "displayName": "Half-Life Dark Theme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "MateoRyhr",
   "description": "A Half-Life inspired dark theme.",
   "icon": "images/lambda-logo.png",
@@ -35,6 +35,9 @@
     "onStartupFinished"
   ],
   "contributes": {
+    "markdown.previewStyles": [
+      "./styles/hl2-markdown.css"
+    ],
     "walkthroughs": [
       {
         "id": "hl2-walkthrough",

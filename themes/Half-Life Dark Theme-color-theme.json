@@ -1,6 +1,9 @@
 {
   "name": "Half-Life Dark Theme",
+  "semanticHighlighting": true,
   "colors": {
+    "textCodeBlock.background": "#191B1F",
+    "textPreformat.foreground": "#FF9A00",
     "editor.background": "#191B1F",
     "editor.foreground": "#DCDCDC",
     "editorCursor.foreground": "#FF9A00",
